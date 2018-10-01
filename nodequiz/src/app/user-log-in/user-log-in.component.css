@@ -1,0 +1,30 @@
+
+
+.log-in-box {
+    text-align: center;
+    
+}
+
+:host .log-in-button {
+    margin-top: 1%;
+    text-align: center;
+    color: rgb(101, 101, 255);
+}
+
+.log-in-card {
+    max-width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 14%;
+    background-color: rgba(169, 172, 172, 0.699);
+}
+
+.log-in-form {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3, h4 {
+    color: rgb(12, 124, 61);
+}
