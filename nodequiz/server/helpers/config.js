@@ -13,11 +13,11 @@ config.web.secret = 'topsecret';
  *
  */
 config.database = {};
-config.database.username = '';
-config.database.password = '';
-config.database.port = '';
-config.database.url = '';
-config.database.name = '';
+config.database.username = 'wsimps';
+config.database.password = 'Mollydog777';
+config.database.port = '63402';
+config.database.url = 'ds163402.mlab.com';
+config.database.name = 'nodequiz';
 
 
 module.exports = config;
