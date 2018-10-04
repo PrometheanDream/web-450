@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home-page',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-
-  constructor() { }
+  
+  
+  quizzes: any;
+  constructor(private http: HttpClient) {
+        this.http.get('/api/quizpage').subscribe(data => { this.quizzes = data ;});
+        
+   }
 
   ngOnInit() {
   }

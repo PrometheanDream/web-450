@@ -7,6 +7,7 @@ const logger = require('./helpers/logger');
 const mongoose = require('mongoose');
 const config = require('./helpers/config');
 const homeRouter = require('./routes/home-router');
+var apiHomePage = require('./routes/api-home-page')
 
 /**
  * MongoDB setup
@@ -33,7 +34,7 @@ app.use(express.static(path.join(__dirname, '../dist/nodequiz')));
 app.use('/', express.static(path.join(__dirname, '../dist/nodequiz')));
 app.use(morgan('dev'));
 
-app.use('/api', homeRouter); // wires the homeController to localhost:3000/api
+app.use('/api/homepage', apiHomePage); // 
 
 /**
  * Request handler
