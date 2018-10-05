@@ -8,7 +8,7 @@ var quizSelectionSchema = new mongoose.Schema({
 
 const quizSelection = module.exports = mongoose.model('quizSelection', quizSelectionSchema);
 
-module.exports.getByName = (name, callback) => {
-    var query = {name: name};
-    quizSelection.findByName(query, callback);
+module.exports.getById = (id, callback) => {
+    var query = {_id: id};
+    quizSelection.findById(query, callback);
 }
