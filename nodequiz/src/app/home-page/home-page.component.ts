@@ -11,7 +11,7 @@ export class HomePageComponent implements OnInit {
   
   quizzes: any;
   constructor(private http: HttpClient) {
-        this.http.get('/api/quizpage').subscribe(data => { this.quizzes = data ;});
+        this.http.get('/api/homepage').subscribe(data => { this.quizzes = data ;});
         
    }
 
