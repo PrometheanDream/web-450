@@ -1,15 +1,9 @@
 
 <h1>Quiz Selection Page</h1>
 
-
-<mat-card class="first-card">
-  <button routerLink="/quizpage" mat-raised-button><h3>test</h3></button>
-</mat-card>
-
 <mat-card>
-  <button routerLink="/quizpage" mat-raised-button><h3>Two-Pizza Team Rule</h3></button>
+<div *ngFor="let data of quizzes">
+  <button routerLink='/quizpage/{{data.id}}' mat-raised-button><h3>{{data.name}}</h3></button>
+</div>
 </mat-card>
 
-<mat-card>
-<button routerLink="/quizpage" mat-raised-button><h3>DevOps Automated Testing</h3></button>
-</mat-card>
