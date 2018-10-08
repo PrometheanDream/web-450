@@ -17,6 +17,9 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { QuizPageComponent } from './quiz-page/quiz-page.component';
 import { HttpClientModule }    from '@angular/common/http';
+import { PresentationPageComponent } from './presentation-page/presentation-page.component';
+import { Ng2CarouselamosModule } from 'ng2-carouselamos';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,8 @@ import { HttpClientModule }    from '@angular/common/http';
     FooterComponent,
     HomePageComponent,
     PageNotFoundComponent,
-    QuizPageComponent
+    QuizPageComponent,
+    PresentationPageComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,9 @@ import { HttpClientModule }    from '@angular/common/http';
     MatInputModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2CarouselamosModule,
+    MatRadioModule
     
   ],
   providers: [],
