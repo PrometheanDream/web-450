@@ -11,9 +11,11 @@ import { Router, Routes } from '@angular/router';
 
 export class QuizPageComponent implements OnInit {
 
+  questions: any;
+  constructor(private router: Router, private http: HttpClient) {
+    this.http.get('/api/quizpage/1').subscribe(data => { this.questions = data ;});
+  }
   
-  constructor(private router: Router) {}
-    
 
   ngOnInit() {
   }

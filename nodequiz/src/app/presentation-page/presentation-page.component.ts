@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, Routes } from '@angular/router';
 
+
 @Component({
 
   selector: 'app-presentation-page',
@@ -14,6 +15,8 @@ export class PresentationPageComponent implements OnInit {
   presentation1;
   presentation2;
   presentation3;
+
+  
 
   constructor(private router: Router) {
     this.presentation1 = [

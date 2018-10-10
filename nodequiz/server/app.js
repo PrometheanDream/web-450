@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 const config = require('./helpers/config');
 const homeRouter = require('./routes/home-router');
 var apiHomePage = require('./routes/api-home-page')
+var apiQuizPageSelection = require('./routes/api-quiz-page-question')
 
 /**
  * MongoDB setup
@@ -34,7 +35,8 @@ app.use(express.static(path.join(__dirname, '../dist/nodequiz')));
 app.use('/', express.static(path.join(__dirname, '../dist/nodequiz')));
 app.use(morgan('dev'));
 
-app.use('/api/homepage', apiHomePage); // 
+app.use('/api/homepage', apiHomePage);
+app.use('/api/quizpage/1', apiQuizPageSelection) // 
 
 /**
  * Request handler

@@ -2,15 +2,14 @@
   <mat-card>
   
     <h2>Show Presentation 1</h2>
-    
     <div *ngFor="let slide of presentation1">
-      <img class="container" [src]="slide.slide">
+      <img [src]="slide.slide">
     </div>
-    <button mat-raised-button>Next Slide</button>
-    <button mat-raised-button>Previous Slide</button>
-    <button routerLink='/quizpage/1' mat-raised-button>Take the Quiz!</button>
-  </mat-card>
+      <button mat-raised-button>Next Slide</button>
+      <button mat-raised-button>Previous Slide</button>
+      <button routerLink='/quizpage/1' mat-raised-button>Take the Quiz!</button>
 
+  </mat-card>
 </div>
 
 <div *ngIf="router.url == '/presentation/2'">

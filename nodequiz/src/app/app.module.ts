@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
+
+
 import { UserLogInComponent } from './user-log-in/user-log-in.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormControl, Validators} from '@angular/forms';
@@ -19,7 +20,10 @@ import { QuizPageComponent } from './quiz-page/quiz-page.component';
 import { HttpClientModule }    from '@angular/common/http';
 import { PresentationPageComponent } from './presentation-page/presentation-page.component';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
-import {MatRadioModule} from '@angular/material/radio';
+import { MatRadioModule } from '@angular/material/radio';
+import { CarouselModule, WavesModule, ButtonsModule } from 'angular-bootstrap-md'
+import { MDBBootstrapModule } from 'angular-bootstrap-md'
+
 
 @NgModule({
   declarations: [
@@ -43,7 +47,10 @@ import {MatRadioModule} from '@angular/material/radio';
     AppRoutingModule,
     HttpClientModule,
     Ng2CarouselamosModule,
-    MatRadioModule
+    MatRadioModule,
+    CarouselModule,
+    MDBBootstrapModule.forRoot()
+    
     
   ],
   providers: [],
