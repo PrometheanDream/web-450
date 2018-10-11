@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { UserLogInComponent } from './user-log-in/user-log-in.component'
 import { QuizPageComponent } from './quiz-page/quiz-page.component'
 import { PresentationPageComponent } from './presentation-page/presentation-page.component'
+import { SingleResultPageComponent } from './single-result-page/single-result-page.component';
 
 
 const appRoutes: Routes = [
@@ -19,7 +20,10 @@ const appRoutes: Routes = [
   { path: 'presentation', component: PresentationPageComponent },
   { path: 'presentation/1', component: PresentationPageComponent },
   { path: 'presentation/2', component: PresentationPageComponent },
-  { path: 'presentation/3', component: PresentationPageComponent }
+  { path: 'presentation/3', component: PresentationPageComponent },
+  { path: 'singleresultpage/1', component: SingleResultPageComponent },
+  { path: 'singleresultpage/2', component: SingleResultPageComponent },
+  { path: 'singleresultpage/3', component: SingleResultPageComponent }
 ];
 
 @NgModule({

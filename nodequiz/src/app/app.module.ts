@@ -22,7 +22,8 @@ import { PresentationPageComponent } from './presentation-page/presentation-page
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { MatRadioModule } from '@angular/material/radio';
 import { CarouselModule, WavesModule, ButtonsModule } from 'angular-bootstrap-md'
-import { MDBBootstrapModule } from 'angular-bootstrap-md'
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { SingleResultPageComponent } from './single-result-page/single-result-page.component'
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md'
     HomePageComponent,
     PageNotFoundComponent,
     QuizPageComponent,
-    PresentationPageComponent
+    PresentationPageComponent,
+    SingleResultPageComponent
   ],
   imports: [
     BrowserModule,

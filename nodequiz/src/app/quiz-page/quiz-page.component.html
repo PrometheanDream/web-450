@@ -2,21 +2,26 @@
 
 
 <div *ngIf="router.url == '/quizpage/1'">
+ <form #quiz1Form (ngSubmit)="onSubmit(quiz1Form.value)">
   <mat-card>      
       <div *ngFor="let data of questions">
             <h2>{{ data.quiz }}</h2>
                 <ul>
-                    <h3> {{ data.question }}</h3> 
-                        <div *ngFor="let answer of data.answers">       
-                        <mat-radio-button >{{ answer.answer1 }}</mat-radio-button>  <br>
-                        <mat-radio-button >{{ answer.answer2 }}</mat-radio-button>  <br>
-                        <mat-radio-button >{{ answer.answer3 }}</mat-radio-button>  <br>
-                        <mat-radio-button >{{ answer.answer4 }}</mat-radio-button> 
+                    <h3>{{ data.question }}</h3> 
+                        <div *ngFor="let answer of data.answers" ngModelGroup="checkGroup">
+                            <mat-radio-group>       
+                                <mat-radio-button [value]="1" ngModel>{{ answer.answer1 }}</mat-radio-button>  <br>
+                                <mat-radio-button [value]="2" ngModel>{{ answer.answer2 }}</mat-radio-button>  <br>
+                                <mat-radio-button [value]="3" ngModel>{{ answer.answer3 }}</mat-radio-button>  <br>
+                                <mat-radio-button [value]="4" ngModel>{{ answer.answer4 }}</mat-radio-button>  <br>
+                            </mat-radio-group> 
                         </div>       
-                </ul>           
-            <button mat-raised-button>SUBMIT</button>   
+                </ul>
+                                         
       </div>
+      <button routerLink='/singleresultpage/1' mat-raised-button>SUBMIT</button>
   </mat-card>
+ </form>
 </div>
 
 <div *ngIf="router.url == '/quizpage/2'">

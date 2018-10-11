@@ -9,11 +9,15 @@ import { Router, Routes } from '@angular/router';
 })
 
 
-export class QuizPageComponent implements OnInit {
 
+export class QuizPageComponent implements OnInit {
+  onSubmit(formData) {formData.checkGroup.quiz1Form.value};
+  
+  
   questions: any;
   constructor(private router: Router, private http: HttpClient) {
     this.http.get('/api/quizpage/1').subscribe(data => { this.questions = data ;});
+    
   }
   
 
