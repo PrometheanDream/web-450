@@ -11,15 +11,19 @@ import { Router, Routes } from '@angular/router';
 
 
 export class QuizPageComponent implements OnInit {
-  onSubmit(formData) {
+  formData: any;   
 
-    var quiz1Value = formData.checkGroup.quiz1Form.value;
+  onSubmit() {
+    
+    if (this.formData) {
+      console.log(this.formData)
+    }
 
-    if (formData.checkGroup.quiz1Form.value)
-    console.log(quiz1Value) 
-
+      if (this.formData.checkGroup.quiz1Form.value) {
+    console.log(this.formData.checkGroup.quiz1Form.value) 
+    }
   }
-  
+  // fake process, this.router.navigate("/singleresultpage1", resultsData)
   
   questions: any;
   constructor(private router: Router, private http: HttpClient) {
