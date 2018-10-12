@@ -11,7 +11,14 @@ import { Router, Routes } from '@angular/router';
 
 
 export class QuizPageComponent implements OnInit {
-  onSubmit(formData) {formData.checkGroup.quiz1Form.value};
+  onSubmit(formData) {
+
+    var quiz1Value = formData.checkGroup.quiz1Form.value;
+
+    if (formData.checkGroup.quiz1Form.value)
+    console.log(quiz1Value) 
+
+  }
   
   
   questions: any;
