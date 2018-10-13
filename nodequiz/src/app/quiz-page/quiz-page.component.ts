@@ -12,7 +12,7 @@ import { Router, Routes } from '@angular/router';
 
 export class QuizPageComponent implements OnInit {
   formData: any;   
-
+resultsData: String;
   onSubmit() {
     
     if (this.formData) {
@@ -22,8 +22,10 @@ export class QuizPageComponent implements OnInit {
       if (this.formData.checkGroup.quiz1Form.value) {
     console.log(this.formData.checkGroup.quiz1Form.value) 
     }
+
+   // *not working* this.router.navigate(routerLink='/singleresultpage1', this.resultsData)
   }
-  // fake process, this.router.navigate("/singleresultpage1", resultsData)
+  
   
   questions: any;
   constructor(private router: Router, private http: HttpClient) {

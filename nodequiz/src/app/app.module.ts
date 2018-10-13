@@ -24,6 +24,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { CarouselModule, WavesModule, ButtonsModule } from 'angular-bootstrap-md'
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { SingleResultPageComponent } from './single-result-page/single-result-page.component'
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 
 
 @NgModule({
@@ -51,7 +52,9 @@ import { SingleResultPageComponent } from './single-result-page/single-result-pa
     Ng2CarouselamosModule,
     MatRadioModule,
     CarouselModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule
     
     
   ],
