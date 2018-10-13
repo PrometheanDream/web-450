@@ -8,12 +8,12 @@
             <h2>{{ data.quiz }}</h2>
                 <ul>
                     <h3>{{ data.question }}</h3> 
-                        <div *ngFor="let answer of data.answers" ngModelGroup="checkGroup">
+                        <div *ngFor="let answer of data.answers; let i = index; "  ngModelGroup="checkGroup">
                             <mat-radio-group>       
-                                <mat-radio-button name="first" [value]="1" ngModel>{{ answer.answer1 }}</mat-radio-button>  <br>
-                                <mat-radio-button name="second" [value]="2" ngModel>{{ answer.answer2 }}</mat-radio-button>  <br>
-                                <mat-radio-button name="third" [value]="3" ngModel>{{ answer.answer3 }}</mat-radio-button>  <br>
-                                <mat-radio-button name="fourth" [value]="4" ngModel>{{ answer.answer4 }}</mat-radio-button>  <br>
+                                <mat-radio-button name="first" [value]= "answer['1' + i]" >{{ answer.answer1 }}</mat-radio-button>  <br>
+                                <mat-radio-button name="second" [value]="answer['2' + i]" >{{ answer.answer2 }}</mat-radio-button>  <br>
+                                <mat-radio-button name="third" [value]="answer['3' + i]" >{{ answer.answer3 }}</mat-radio-button>  <br>
+                                <mat-radio-button name="fourth" [value]="answer['4' + i]" >{{ answer.answer4 }}</mat-radio-button>  <br>
                             </mat-radio-group> 
                         </div>       
                 </ul>

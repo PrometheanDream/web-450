@@ -11,17 +11,12 @@ import { Router, Routes } from '@angular/router';
 
 
 export class QuizPageComponent implements OnInit {
-  formData: any;   
-resultsData: String;
-  onSubmit() {
+   
+// resultsData: String;
+  onSubmit(value: any) {
+    console.log(value)
     
-    if (this.formData) {
-      console.log(this.formData)
-    }
-
-      if (this.formData.checkGroup.quiz1Form.value) {
-    console.log(this.formData.checkGroup.quiz1Form.value) 
-    }
+    
 
    // *not working* this.router.navigate(routerLink='/singleresultpage1', this.resultsData)
   }
