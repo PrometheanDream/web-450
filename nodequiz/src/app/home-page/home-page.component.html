@@ -4,6 +4,7 @@
 <mat-card>
 <div *ngFor="let data of quizzes">
   <button routerLink='/presentation/{{data.id}}' mat-raised-button><h3>{{data.name}}</h3></button>
-</div>
+</div> <br>
+<button routerLink='/cumulativeresults' mat-raised-button><h3>Cumulative Results Page</h3></button>
 </mat-card>
 

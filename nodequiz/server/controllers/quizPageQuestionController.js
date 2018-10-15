@@ -1,9 +1,9 @@
-var quizPageQuestionSelection = require('../models/quiz_question_selection');
+var quizPageQuestionSelection = require('../models/quiz_page_question_selection');
 
 exports.findAllQuestions = function(req, res, next) {
-  quizPageQuestionSelection.find(function (err, questions) {
+  quizPageQuestionSelection.find(function (err, quiz) {
     if (err) return next(err);
-    console.log(questions);
-    res.json(questions);
+    console.log(quiz);
+    res.json(quiz);
   })
 };

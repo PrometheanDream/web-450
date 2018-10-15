@@ -25,6 +25,7 @@ import { CarouselModule, WavesModule, ButtonsModule } from 'angular-bootstrap-md
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { SingleResultPageComponent } from './single-result-page/single-result-page.component'
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { CumulativeResultsPageComponent } from './cumulative-results-page/cumulative-results-page.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
     PageNotFoundComponent,
     QuizPageComponent,
     PresentationPageComponent,
-    SingleResultPageComponent
+    SingleResultPageComponent,
+    CumulativeResultsPageComponent
   ],
   imports: [
     BrowserModule,

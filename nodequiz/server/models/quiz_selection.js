@@ -2,7 +2,8 @@ var mongoose = require('mongoose');
 
 var quizSelectionSchema = new mongoose.Schema({
     id: Number,
-    name: String },
+    name: String 
+},
     { collection: 'Quiz_Collection'});
 
 const quizSelection = module.exports = mongoose.model('quizselection', quizSelectionSchema);
