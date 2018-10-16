@@ -21,7 +21,21 @@ var quizPageQuestionSelectionSchema = new mongoose.Schema({
                 {answer4: String}]},
     ],
 
-    /*questions: [
+     },
+    { collection: 'Quiz_Questions'});
+
+const quizPageQuestionSelection = module.exports = mongoose.model('quizpagequestionselection', quizPageQuestionSelectionSchema);
+
+module.exports.getById = (id, callback) => {
+    Quiz.findOne({ "id": id }, callback);
+  };
+
+module.exports.getById = (id, callback) => {
+    var query = {_id: id};
+    quizPageQuestionSelection.findById(query, callback);
+}
+
+/*questions: [
         {question1: String,
             answers: [{answer1: String}, 
                 {answer2: String}, 
@@ -73,14 +87,3 @@ var quizPageQuestionSelectionSchema = new mongoose.Schema({
                 {answer3: String}, 
                 {answer4: String}]}],
               */
-
-
-     },
-    { collection: 'Quiz_Questions'});
-
-const quizPageQuestionSelection = module.exports = mongoose.model('quizpagequestionselection', quizPageQuestionSelectionSchema);
-
-module.exports.getById = (id, callback) => {
-    var query = {_id: id};
-    quizPageQuestionSelection.findById(query, callback);
-}

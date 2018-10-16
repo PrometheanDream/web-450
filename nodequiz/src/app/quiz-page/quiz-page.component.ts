@@ -12,7 +12,7 @@ import { Router, Routes } from '@angular/router';
 
 export class QuizPageComponent implements OnInit {
 // variable List
-answers: Array<string>;  
+
 quiz: any;  
 
 // resultsData: String;

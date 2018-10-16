@@ -6,17 +6,17 @@
   <mat-card>      
       <div *ngFor="let data of quiz; let x = index">
             <h2 *ngIf=" data['id'] == '1'">{{ data['quiz'] }}</h2> 
-                <ul *ngFor="let questionInfo of data.questions; let y = index" class="question"> 
+                <ul *ngFor="let questionInfo of data.questions; let y = index" class="question" ngModelGroup="checkGroup{{y + 1}}" > 
                     <h3 *ngIf=" data['id'] == '1'">Question {{y + 1}}: {{ questionInfo['question' + ( y+1 )]}}</h3>
-                        <div>
-                            <div *ngFor="let answerInfo of questionInfo.answers; let z = index; "  ngModelGroup="checkGroup{{y + 1}}">
+                       
+                            <div *ngFor="let answerInfo of questionInfo.answers; let z = index;" >
 
                                 <mat-radio-group *ngIf=" data['id'] == '1'">      
-                                    <mat-radio-button class="answer-radio" name="radio{{z+1}}" [value]= "answerInfo['answer' + (z+1)]" >{{ answerInfo['answer' + ( z+1 )] }}</mat-radio-button>  <br>
+                                    <mat-radio-button name="radio" [value]="answerInfo['answer' + ( z+1 )]" >{{ answerInfo['answer' + ( z+1 )] }}</mat-radio-button>  <br>
                                 </mat-radio-group>  
 
                             </div>       
-                        </div>
+                        
                 </ul>
                                          
       </div>  <!--routerLink='/singleresultpage/1' -->
