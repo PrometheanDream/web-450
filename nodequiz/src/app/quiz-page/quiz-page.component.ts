@@ -17,7 +17,7 @@ quiz: any;
 
 // resultsData: String;
   onSubmit(formData) {
-    console.log(formData.quiz1Form)
+    console.log(formData)
     
   if (formData) {
     console.log(formData.value)
