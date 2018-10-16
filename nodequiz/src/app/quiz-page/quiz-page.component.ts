@@ -11,21 +11,21 @@ import { Router, Routes } from '@angular/router';
 
 
 export class QuizPageComponent implements OnInit {
-   
+// variable List
+answers: Array<string>;  
+quiz: any;  
+
 // resultsData: String;
   onSubmit(formData) {
-    console.log(formData)
+    console.log(formData.quiz1Form)
     
-  if (formData.value) {
+  if (formData) {
     console.log(formData.value)
   }  
 
    // *not working* this.router.navigate(routerLink='/singleresultpage1', this.resultsData)
   }
   
-  
-quiz: any;
-
   constructor(private router: Router, private http: HttpClient) {
     this.http.get('/api/quizpage1').subscribe(data => { this.quiz = data ;console.log(this.quiz)});
 
