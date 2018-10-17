@@ -27,7 +27,9 @@ quiz: any;
   }
   
   constructor(private router: Router, private http: HttpClient) {
-    this.http.get('/api/quizpage1').subscribe(data => { this.quiz = data ;console.log(this.quiz)});
+    this.http.get('/api/quizpage/1').subscribe(data => { this.quiz = data ;console.log(this.quiz)});
+    this.http.get('/api/quizpage/2').subscribe(data => { this.quiz = data ;console.log(this.quiz)});
+    this.http.get('/api/quizpage/3').subscribe(data => { this.quiz = data ;console.log(this.quiz)});
 
     
   }

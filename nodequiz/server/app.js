@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const config = require('./helpers/config');
 const homeRouter = require('./routes/home-router');
 var apiHomePage = require('./routes/api-home-page');
-var apiQuizPageSelection = require('./routes/api-quiz-page-question');
+var apiQuizPageQuestion = require('./routes/api-quiz-page-question');
 
 
 /**
@@ -37,7 +37,8 @@ app.use('/', express.static(path.join(__dirname, '../dist/nodequiz')));
 app.use(morgan('dev'));
 
 app.use('/api/homepage', apiHomePage);
-app.use('/api/quizpage1', apiQuizPageSelection)
+app.use('/api', apiQuizPageQuestion)
+
  
 
 /**

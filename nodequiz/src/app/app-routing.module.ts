@@ -14,9 +14,9 @@ const appRoutes: Routes = [
   { path: '', component: UserLogInComponent },
   { path: 'homepage', component: HomePageComponent },
   { path: 'quizpage', component: QuizPageComponent },
-  { path: 'quizpage1', component: QuizPageComponent }, //routes to specific urls when /1 is added to the routerLink
-  { path: 'quizpage2', component: QuizPageComponent },
-  { path: 'quizpage3', component: QuizPageComponent },
+  { path: 'quizpage/1', component: QuizPageComponent }, //routes to specific urls when /1 is added to the routerLink
+  { path: 'quizpage/2', component: QuizPageComponent },
+  { path: 'quizpage/3', component: QuizPageComponent },
   { path: 'presentation', component: PresentationPageComponent },
   { path: 'presentation/1', component: PresentationPageComponent },
   { path: 'presentation/2', component: PresentationPageComponent },

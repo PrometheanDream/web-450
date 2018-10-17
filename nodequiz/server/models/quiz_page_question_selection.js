@@ -1,8 +1,8 @@
 var mongoose = require('mongoose');
 
 var quizPageQuestionSelectionSchema = new mongoose.Schema({
-    id: Number,
-    quiz: String,
+    quizId: Number,
+    quizName: String,
     questions: 
     [{question1: String}, 
         {question2: String}, 
@@ -26,14 +26,15 @@ var quizPageQuestionSelectionSchema = new mongoose.Schema({
 
 const quizPageQuestionSelection = module.exports = mongoose.model('quizpagequestionselection', quizPageQuestionSelectionSchema);
 
-module.exports.getById = (id, callback) => {
-    Quiz.findOne({ "id": id }, callback);
+module.exports.getById = (quizId, callback) => {
+    quizPageQuestionSelection.getById({ "quizId": quizId }, callback);
   };
 
-module.exports.getById = (id, callback) => {
+/*module.exports.getById = (id, callback) => {
     var query = {_id: id};
     quizPageQuestionSelection.findById(query, callback);
-}
+}  
+*/
 
 /*questions: [
         {question1: String,

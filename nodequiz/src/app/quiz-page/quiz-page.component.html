@@ -1,72 +1,67 @@
 <!-- The Question Portion will eventually be a *ngFor that populates inside of the quesiton/answer format outlined below-->
 <!---->
 
-<div *ngIf="router.url == '/quizpage1'">
+<div *ngIf="router.url == '/quizpage/1'">
  <form #quiz1Form="ngForm" name="quiz1" (ngSubmit)="onSubmit(quiz1Form.value)">
-  <mat-card>      
-      <div *ngFor="let data of quiz; let x = index">
-            <h2 *ngIf=" data['id'] == '1'">{{ data['quiz'] }}</h2> 
-                <ul *ngFor="let questionInfo of data.questions; let y = index" class="question" ngModelGroup="checkGroup{{y + 1}}" > 
-                    <h3 *ngIf=" data['id'] == '1'">Question {{y + 1}}: {{ questionInfo['question' + ( y+1 )]}}</h3>
+  <mat-card>                        
+                <ul *ngFor="let questionData of quiz['questions']; let y = index" class="question" ngModelGroup="checkGroup"  > 
+                    <h3>Question {{y + 1}}: {{ questionData['question' + ( y+1 )]}}</h3>
                        
-                            <div *ngFor="let answerInfo of questionInfo.answers; let z = index;" >
+                            <div *ngFor="let answerData of questionData.answers; let z = index;" >
 
-                                <mat-radio-group *ngIf=" data['id'] == '1'">      
-                                    <mat-radio-button name="radio" [value]="answerInfo['answer' + ( z+1 )]" >{{ answerInfo['answer' + ( z+1 )] }}</mat-radio-button>  <br>
+                                <mat-radio-group>      
+                                    <mat-radio-button name="radio" [value]="answerData['answer' + ( z+1 )]" >{{ answerData['answer' + ( z+1 )] }}</mat-radio-button>  <br>
                                 </mat-radio-group>  
 
-                            </div>       
-                        
+                            </div>     
                 </ul>
                                          
-      </div>  <!--routerLink='/singleresultpage/1' -->
+        <!--routerLink='/singleresultpage/1' -->
         <button type="submit"   mat-raised-button>SUBMIT</button>
     </mat-card>
  </form>
 </div>
 
 
-<div *ngIf="router.url == '/quizpage2'">
+<div *ngIf="router.url == '/quizpage/2'  ">
     <form #quiz1Form="ngForm" name="quiz2" (ngSubmit)="onSubmit(quiz2Form.value)">
-  <mat-card>      
-      <div *ngFor="let data of quiz; let x = index">
-            <h2 *ngIf=" data['id'] == '2'">{{ data['quiz'] }}</h2>
-            <ul *ngFor="let questionInfo of data.questions; let y = index"> 
-                    <h3 *ngIf=" data['id'] == '2'">Question {{y + 1}}: {{ questionInfo['question' + (y+1)]}}</h3>
-                <div>
-                   <div *ngFor="let answerInfo of questionInfo.answers; let z = index; "  ngModelGroup="checkGroup">
-                        <mat-radio-group *ngIf=" data['id'] == '2'">      
-                            <mat-radio-button name="radio" [value]= "answer" >{{ answerInfo['answer' + (z+1)] }}</mat-radio-button>  <br>
-                        </mat-radio-group>  
-                    </div>       
-                </div>
-            </ul>
-                                     
-  </div>  
-  <button type="submit" routerLink='/singleresultpage/2'  mat-raised-button>SUBMIT</button>
-</mat-card>
-</form>
+  <mat-card>                        
+                <ul *ngFor="let questionData of quiz['questions']; let y = index" class="question" ngModelGroup="checkGroup"  > 
+                    <h3>Question {{y + 1}}: {{ questionData['question' + ( y+1 )]}}</h3>
+                       
+                            <div *ngFor="let answerData of questionData.answers; let z = index;" >
+
+                                <mat-radio-group>      
+                                    <mat-radio-button name="radio" [value]="answerData['answer' + ( z+1 )]" >{{ answerData['answer' + ( z+1 )] }}</mat-radio-button>  <br>
+                                </mat-radio-group>  
+
+                            </div>     
+                </ul>
+                                         
+        <!--routerLink='/singleresultpage/1' -->
+        <button type="submit"   mat-raised-button>SUBMIT</button>
+    </mat-card>
+ </form>
 </div>
    
 
-   <div *ngIf="router.url == '/quizpage3'">
+   <div *ngIf="router.url == '/quizpage/3'">
     <form #quiz1Form="ngForm" name="quiz3" (ngSubmit)="onSubmit(quiz3Form.value)">
-            <mat-card>      
-                    <div *ngFor="let data of quiz; let x = index">
-                          <h2 *ngIf=" data['id'] == '3'">{{ data['quiz'] }}</h2> <!-- is really quiz.quiz(name)-->
-                              <ul *ngFor="let questionInfo of data.questions; let y = index"> 
-                                      <h3 *ngIf=" data['id'] == '3'">Question {{y + 1}}: {{ questionInfo['question' + (y+1)]}}</h3>
-                                  <div>
-                                     <div *ngFor="let answerInfo of questionInfo.answers; let z = index; "  ngModelGroup="checkGroup">
-                                          <mat-radio-group *ngIf=" data['id'] == '3'">      
-                                              <mat-radio-button name="radio" [value]= "answer" >{{ answerInfo['answer' + (z+1)] }}</mat-radio-button>  <br>
-                                          </mat-radio-group>  
-                                      </div>       
-                                  </div>
-                              </ul>
-                                                       
-                    </div>  
-                    <button type="submit" routerLink='/singleresultpage/1'  mat-raised-button>SUBMIT</button>
-                </mat-card>
-               </form>
-              </div>
+            <mat-card>                        
+                    <ul *ngFor="let questionData of quiz['questions']; let y = index" class="question" ngModelGroup="checkGroup"  > 
+                        <h3>Question {{y + 1}}: {{ questionData['question' + ( y+1 )]}}</h3>
+                           
+                                <div *ngFor="let answerData of questionData.answers; let z = index;" >
+    
+                                    <mat-radio-group>      
+                                        <mat-radio-button name="radio" [value]="answerData['answer' + ( z+1 )]" >{{ answerData['answer' + ( z+1 )] }}</mat-radio-button>  <br>
+                                    </mat-radio-group>  
+    
+                                </div>     
+                    </ul>
+                                             
+            <!--routerLink='/singleresultpage/1' -->
+            <button type="submit"   mat-raised-button>SUBMIT</button>
+        </mat-card>
+     </form>
+    </div>
