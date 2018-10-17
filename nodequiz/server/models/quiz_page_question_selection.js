@@ -27,7 +27,7 @@ var quizPageQuestionSelectionSchema = new mongoose.Schema({
 const quizPageQuestionSelection = module.exports = mongoose.model('quizpagequestionselection', quizPageQuestionSelectionSchema);
 
 module.exports.getById = (quizId, callback) => {
-    quizPageQuestionSelection.getById({ "quizId": quizId }, callback);
+    quizPageQuestionSelection.findOne({ "quizId": quizId }, callback);
   };
 
 /*module.exports.getById = (id, callback) => {

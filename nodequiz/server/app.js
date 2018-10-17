@@ -37,7 +37,7 @@ app.use('/', express.static(path.join(__dirname, '../dist/nodequiz')));
 app.use(morgan('dev'));
 
 app.use('/api/homepage', apiHomePage);
-app.use('/api', apiQuizPageQuestion)
+app.use('/api/quizpage/:quizId', apiQuizPageQuestion)
 
  
 
