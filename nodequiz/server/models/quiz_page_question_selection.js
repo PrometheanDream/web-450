@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var quizPageQuestionSelectionSchema = new mongoose.Schema({
-    quizId: Number,
+    quizId: String,
     quizName: String,
     questions: 
     [{question1: String}, 

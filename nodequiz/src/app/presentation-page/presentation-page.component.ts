@@ -44,7 +44,9 @@ export class PresentationPageComponent implements OnInit {
       {slide: 'assets/powerpoints/Presentation_2/Slide7.png'},
       {slide: 'assets/powerpoints/Presentation_2/Slide8.png'},
       {slide: 'assets/powerpoints/Presentation_2/Slide9.png'},
-      {slide: 'assets/powerpoints/Presentation_2/Slide10.png'}
+      {slide: 'assets/powerpoints/Presentation_2/Slide10.png'},
+      {slide: 'assets/powerpoints/Presentation_2/Slide11.png'},
+      {slide: 'assets/powerpoints/Presentation_2/Slide12.png'}
   ],
 
   this.presentation3 = [
@@ -57,7 +59,9 @@ export class PresentationPageComponent implements OnInit {
     {slide: 'assets/powerpoints/Presentation_3/Slide7.png'},
     {slide: 'assets/powerpoints/Presentation_3/Slide8.png'},
     {slide: 'assets/powerpoints/Presentation_3/Slide9.png'},
-    {slide: 'assets/powerpoints/Presentation_3/Slide10.png'}
+    {slide: 'assets/powerpoints/Presentation_3/Slide10.png'},
+    {slide: 'assets/powerpoints/Presentation_3/Slide12.png'},
+    {slide: 'assets/powerpoints/Presentation_3/Slide12.png'}
 
   ]
 
