@@ -1,40 +1,40 @@
-<div *ngIf="router.url == '/presentation/1'">
+<div class="picture-card" *ngIf="router.url == '/presentation/1'">
   <mat-card>
   
-    <h2>Show Presentation 1</h2>
+    <h2>Presentation 1</h2>
     <div *ngFor="let slide of presentation1">
       <img [src]="slide.slide">
     </div>
 
-      <button routerLink='/quizpage/1' mat-raised-button>Take the Quiz!</button>
+      <button class="take-quiz-button" routerLink='/quizpage/1' mat-raised-button>Take the Quiz!</button>
 
   </mat-card>
 </div>
 
-<div *ngIf="router.url == '/presentation/2'">
+<div class="picture-card" *ngIf="router.url == '/presentation/2'">
 
   <mat-card>
-  <h2>Show Presentation 2</h2>
+  <h2>Presentation 2</h2>
 
     <div *ngFor="let slide of presentation2">
       <img [src]="slide.slide">
     </div>
 
-    <button routerLink='/quizpage/2' mat-raised-button>Take the Quiz!</button>
+    <button class="take-quiz-button" routerLink='/quizpage/2' mat-raised-button>Take the Quiz!</button>
   </mat-card>
 
 </div>
 
 
-<div *ngIf="router.url == '/presentation/3'">
+<div class="picture-card" *ngIf="router.url == '/presentation/3'">
   <mat-card>
-  <h2>Show Presentation 3</h2>
+  <h2>Presentation 3</h2>
 
   <div *ngFor="let slide of presentation3">
       <img [src]="slide.slide">
     </div>
 
-    <button routerLink='/quizpage/3' mat-raised-button>Take the Quiz!</button>
+    <button class="take-quiz-button" routerLink='/quizpage/3' mat-raised-button>Take the Quiz!</button>
 
   </mat-card>
 
